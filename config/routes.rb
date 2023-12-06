@@ -4,4 +4,11 @@ Rails.application.routes.draw do
   root "articles#index"
 
   resources :articles, only: [:index, :show]
+
+  namespace :admin do
+    root "articles#index"
+
+    resources :articles
+    resource :sessions
+  end
 end
