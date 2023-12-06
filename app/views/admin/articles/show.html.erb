@@ -1,0 +1,13 @@
+<h1>ADMIN Articles</h1>
+
+<h2><%= @article.title %></h2>
+
+<p><%= @article.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_admin_article_path(@article) %></li>
+  <li><%= link_to "Destroy", admin_article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
