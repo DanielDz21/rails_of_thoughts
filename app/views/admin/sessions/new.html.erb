@@ -1,17 +1,27 @@
-<h1>Log in</h1>
-
-<%= form_with model: @user, url: admin_sessions_path do |form| %>
-  <div>
-    <%= form.label :email %>
-    <%= form.email_field :email %>
+<div class="container mx-auto">
+  <div class="max-w-md mx-auto my-10">
+    <div class="text-center">
+      <h1 class="my-3 text-3xl font-semibold text-gray-700">Sign in</h1>
+      <p class="text-gray-500">Sign in to access your account</p>
+    </div>
+    <div class="m-7">
+      <%= form_with model: @user, url: admin_sessions_path do |form| %>
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm text-gray-600">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="you@company.com"
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#e3dccf] focus:border-[#b1aba1]" />
+        </div>
+        <div class="mb-6">
+          <div class="flex justify-between mb-2">
+            <label for="password" class="text-sm text-gray-600">Password</label>
+          </div>
+          <input type="password" name="password" id="password" placeholder="Your Password"
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-[#e3dccf] focus:border-[#b1aba1]" />
+        </div>
+        <div class="mb-6">
+          <button class="w-full px-3 py-4 text-white bg-[#65625c] rounded-md focus:outline-none">Sign in</button>
+        </div>
+        <% end %>
+    </div>
   </div>
-
-  <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-
-  <div>
-    <%= form.submit "Log in" %>
-  </div>
-<% end %>
+</div>
