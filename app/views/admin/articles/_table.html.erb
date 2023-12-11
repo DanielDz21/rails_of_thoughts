@@ -1,0 +1,42 @@
+<div class="relative max-w-none mx-auto lg:max-w-2xl">
+  <table class="caption-bottom text-sm w-full divide-y divide-gray-400 text-gray-700 bg-[#f2efe8]">
+    <thead class="[&amp;_tr]:border-b bg-[#d8d2c4]">
+      <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+        <th class="h-12 px-4 text-left align-middle font-medium text-[#4e4b33]">
+          ID
+        </th>
+        <th class="h-12 px-4 text-left align-middle font-medium text-[#4e4b33]">
+          Title
+        </th>
+        <th class="h-12 px-4 text-left align-middle font-medium text-[#4e4b33]">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody class="[&amp;_tr:last-child]:border-0">
+      <% @articles.each do |article| %>
+        <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+          <td class="p-4 align-middle">
+            <%= article.id %>
+          </td>
+          <td class="p-4 align-middle">
+            <%= article.title %>
+          </td>
+          <td class="p-4 align-middle space-x-2">
+            <button
+              class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 bg-[#a68967] text-[#f2efe8]">
+              <%= link_to 'Edit', edit_admin_article_path(article) %>
+            </button>
+            <button
+              class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-destructive/90 h-10 px-4 py-2 bg-[#8b5e3c] text-[#f2efe8]">
+              <%= link_to 'Delete', admin_article_path(article), method: :delete, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+            </button>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
