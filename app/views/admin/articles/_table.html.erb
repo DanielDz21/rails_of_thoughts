@@ -1,0 +1,57 @@
+<div class="relative max-w-none mx-auto lg:max-w-2xl">
+  <div class="border-b-2 border-[#fefaf2] flex items-center justify-between rounded-md bg-[#d8d2c4] px-4 pb-[20px] pt-4">
+    <h4 class="text-lg text-[#4e4b33] font-bold">
+      Articles
+    </h4>
+    <a href="<%= new_admin_article_path %>">
+      <button class="text-lg text-[#4e4b33] rounded-lg px-4 py-2 font-medium bg-[#c2bdb0] transition duration-200 hover:bg-[#aca89c]">
+        Create
+      </button>
+    </a>
+  </div>
+
+  <table class="text-lg w-full bg-[#f2efe8]">
+    <thead class="bg-[#d8d2c4]">
+      <tr>
+        <th class="h-12 px-4 text-left align-middle font-medium text-[#4e4b33]">
+          ID
+        </th>
+        <th class="h-12 px-4 text-left align-middle font-medium text-[#4e4b33]">
+          Title
+        </th>
+        <th class="h-12 px-4 text-center align-center font-medium text-[#4e4b33]">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td class="p-4 align-middle">
+            <%= article.id %>
+          </td>
+            <td class="p-4 align-middle">
+              <a href="<%= admin_article_path(article) %>">
+                <%= article.title %>
+              </a>
+            </td>
+          <td class="p-4 flex justify-center align-middle space-x-2">
+            <a href="<%= edit_admin_article_path(article) %>">
+              <button
+                class="rounded-md w-16 text-sm font-medium h-10 px-4 py-2 bg-[#a68967] text-[#f2efe8]">
+                Edit
+              </button>
+            </a>
+            <button
+              class="rounded-md text-sm font-medium h-10 px-4 py-2 bg-[#8b5e3c] text-[#f2efe8]">
+              <%= link_to 'Delete', admin_article_path(article), method: :delete, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+            </button>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

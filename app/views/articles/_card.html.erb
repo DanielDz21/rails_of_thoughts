@@ -1,0 +1,20 @@
+<div class="rounded-lg border shadow-sm bg-white">
+  <div class="flex flex-col h-full space-y-1.5 p-6"">
+    <h3 class="tracking-tight text-2xl font-bold">
+      <%= article.title.truncate(58) %>
+    </h3>
+    <p class="text-sm text-gray-600">
+      <%= article.created_at.strftime("%B %d, %Y") %>
+    </p>
+    <p class="text-base text-gray-600 overflow-hidden h-auto">
+      <br>
+      <%= article.content.to_plain_text.truncate(150) %>
+    </p>
+  </div>
+  <div class="flex items-center p-3">
+    <button
+      class="-ml-1 text-sm font-medium underline-offset-4 hover:underline h-10 px-4 py-2">
+      <%= link_to 'Read more', article %>
+    </button>
+  </div>
+</div>

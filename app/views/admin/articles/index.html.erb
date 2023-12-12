@@ -1,13 +1,1 @@
-<h1>ADMIN Articles</h1>
-
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, admin_article_path(article) %>
-    </li>
-  <% end %>
-</ul>
-
-<%= button_to "Log out", admin_sessions_path, method: :delete %>
-<%= link_to "Create new article", new_admin_article_path %>
-
+<%= render "table" %>

@@ -1,15 +1,23 @@
 <%= form_for [:admin, @article] do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <div class="p-6">
+    <div>
+      <div class="space-y-1">
+        <%= form.label :title, class: "text-md font-medium text-gray-700" %>
+        <%= form.text_field :title, class: "flex h-10 w-full rounded-md text-md focus:ring-[#e3dccf] focus:border-[#b1aba1] border-gray-300" %><br>
+      </div>
+      <div class="space-y-1">
+        <%= form.label :content, class: "text-md font-medium text-gray-700" %>
+        <%= form.rich_text_area :content, class: "flex h-10 w-full rounded-md text-md focus:ring-[#e3dccf] focus:border-[#b1aba1] border-gray-300" %><br>
+      </div>
+    </div>
   </div>
+  <div class="flex items-center p-6">
 
-  <div>
-    <%= form.label :content %><br>
-    <%= form.rich_text_area :content %>
-  </div>
+    <%= button_to "Back", admin_articles_path, class: "rounded-md text-md font-medium underline-offset-4 hover:underline h-10 px-4 -mt-8" %>
 
-  <div>
-    <%= form.submit %>
+    <button
+      class="rounded-md text-md font-medium h-10 px-4 -mt-8 ml-2 bg-[#65625c] text-white">
+      Submit
+    </button>
   </div>
 <% end %>

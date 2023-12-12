@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-[3.5rem]">
       <%= @article.title %>
     </h1>
-    <p class="text-gray-500 dark:text-gray-400">
+    <p class="text-gray-500">
       Posted on <%= @article.created_at.strftime("%B %d, %Y") %> by
       <a class="underline text-blue-600" href="https://github.com/danielDz21/" target="_blank">
         Daniel Silva
@@ -14,16 +14,3 @@
     </p>
   </article>
 </main>
-<footer class="flex justify-center py-4 px-6 bg-white shadow-md mt-8">
-  <div class="flex items-center space-x-2">
-    <a class="text-blue-600 underline" href="#">
-      About
-    </a>
-    <a class="text-blue-600 underline" href="#">
-      Contact
-    </a>
-    <a class="text-blue-600 underline" href="#">
-      Privacy
-    </a>
-  </div>
-</footer>
