@@ -1,13 +1,28 @@
-<h1>ADMIN Articles</h1>
+<main class="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+  <a href="<%= edit_admin_article_path(@article) %>">
+    <button class="rounded-md w-20 text-sm font-medium h-10 px-4 py-2 bg-[#a68967] text-[#f2efe8]">
+      Edit
+    </button>
+  </a>
+  <button class="rounded-md w-20 text-sm font-medium h-10 px-4 py-2 bg-[#8b5e3c] text-[#f2efe8]">
+    <%= link_to 'Delete', admin_article_path(@article), method: :delete, data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        } %>
+  </button>
 
-<h2><%= @article.title %></h2>
-
-<p><%= @article.content %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_admin_article_path(@article) %></li>
-  <li><%= link_to "Destroy", admin_article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
+  <article class="prose prose-lg max-w-none mx-auto lg:max-w-3xl">
+    <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-[3.5rem]">
+      <%= @article.title %>
+    </h1>
+    <p class="text-gray-500">
+      Posted on <%= @article.created_at.strftime("%B %d, %Y") %> by
+      <a class="underline text-blue-600" href="https://github.com/danielDz21/" target="_blank">
+        Daniel Silva
+      </a>
+    </p>
+    <p>
+      <%= @article.content %>
+    </p>
+  </article>
+</main>
