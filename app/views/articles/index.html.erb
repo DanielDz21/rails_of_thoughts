@@ -1,5 +1,5 @@
 <div>
-  <main class="px-4 md:px-6 py-8 flex justify-center">
+  <main class="px-4 md:px-6 py-8 flex flex-wrap justify-center">
     <% @articles.each do |article| %>
       <div class="w-full md:w-1/3 px-4 mb-8">
         <%= render "card", article: article %>
