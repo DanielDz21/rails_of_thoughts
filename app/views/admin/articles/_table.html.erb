@@ -30,11 +30,13 @@
           <td class="p-4 align-middle">
             <%= article.id %>
           </td>
-          <td class="p-4 align-middle">
-            <%= article.title %>
-          </td>
+            <td class="p-4 align-middle">
+              <a href="<%= admin_article_path(article) %>">
+                <%= article.title %>
+              </a>
+            </td>
           <td class="p-4 flex justify-center align-middle space-x-2">
-            <a href="<%= article_path(article) %>">
+            <a href="<%= edit_admin_article_path(article) %>">
               <button
                 class="rounded-md w-16 text-sm font-medium h-10 px-4 py-2 bg-[#a68967] text-[#f2efe8]">
                 Edit
