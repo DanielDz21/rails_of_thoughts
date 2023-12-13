@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-
   private
 
   def authenticate_user!
@@ -27,7 +26,7 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
   end
 
-  def logout(user)
+  def logout(_user)
     Current.user = nil
     reset_session
   end

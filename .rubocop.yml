@@ -1,0 +1,129 @@
+# You can find more information about RuboCop pending cops policy
+# https://docs.rubocop.org/rubocop/versioning.html#pending-cops
+#
+# These are the default options. The .rubocop.yml inherit and
+# override all the default options.
+# https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml
+
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.2.2
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  NewCops: enable
+  SuggestExtensions:
+    rubocop-graphql: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 120
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 15
+
+Metrics/BlockLength:
+  Exclude:
+   - 'spec/**/*.rb'
+
+Metrics/ClassLength:
+  Max: 100
+
+Metrics/CyclomaticComplexity:
+  Max: 6
+
+Metrics/MethodLength:
+  Max: 10
+
+Metrics/ModuleLength:
+  Max: 100
+
+Metrics/PerceivedComplexity:
+  Max: 7
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: true
+
+Rails/Blank:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/EnvironmentVariableAccess:
+  Enabled: false
+
+Rails/FindEach:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+Rails/Presence:
+  Enabled: false
+
+Rails/RedundantForeignKey:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact # default: nested
+
+Style/Documentation:
+  Enabled: false # default: true
+
+Style/FormatStringToken:
+  EnforcedStyle: unannotated # default: annotated
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never # default: always
+
+Style/GuardClause:
+  Enabled: false # default: true
+
+Style/HashAsLastArrayItem:
+  Enabled: false
+
+Style/RedundantAssignment:
+  Enabled: true
+
+Style/SymbolArray:
+  EnforcedStyle: brackets # default: percent
+
+Style/WordArray:
+  Enabled: true
+  EnforcedStyle: brackets
