@@ -1,24 +1,3 @@
-# README
+# Rails of Thoughts Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project was created for study purposes, aiming to learn new concepts and reinforce those I already have. The idea is to gradually add improvements, always evolving and learning along the way. At this initial stage, I am open to accepting issue requests but not pull requests, as this is a personal learning project.
