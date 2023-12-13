@@ -68,6 +68,14 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'rspec-rails', '6.1.0', group: [:test, :development]
+
+gem 'rails-controller-testing', group: [:test, :development]
+
+gem "factory_bot_rails", "~> 6.4.2", group: :test
+
+gem 'byebug', '11.1.3', group: [:test, :development]
+
 gem 'dockerfile-rails', '>= 1.5', group: :development
 
 gem 'sentry-ruby', '~> 5.15'
