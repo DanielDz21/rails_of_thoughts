@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root "articles#index"
 
+  get 'about', to: 'layouts#about'
+
   resources :articles, only: [:index, :show]
 
   namespace :admin do
