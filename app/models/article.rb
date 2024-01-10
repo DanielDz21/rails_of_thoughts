@@ -4,8 +4,8 @@ class Article < ApplicationRecord
   validates :title, presence: true
 
   def read_time
-    words_per_minute = 220
+    words_per_minute = 180
     content_length = content.to_plain_text.split.size
-    (content_length / words_per_minute).floor
+    (content_length / words_per_minute.to_f).ceil
   end
 end
