@@ -83,3 +83,5 @@ gem 'sentry-ruby', '~> 5.15'
 gem 'sentry-rails', '~> 5.15'
 
 gem 'tailwindcss-rails', '~> 2.0.32'
+
+gem 'friendly_id', '~> 5.1.0'

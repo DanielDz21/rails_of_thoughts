@@ -1,7 +1,14 @@
 class Article < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   has_rich_text :content
 
   validates :title, presence: true
+
+  def should_generate_new_friendly_id?
+    title_changed?
+  end
 
   def read_time
     words_per_minute = 180
