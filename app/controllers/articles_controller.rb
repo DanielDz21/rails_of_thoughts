@@ -4,6 +4,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find_by(id: params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 end
