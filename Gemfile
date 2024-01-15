@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.2.2'
+ruby '3.3.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.2'
@@ -9,19 +9,19 @@ gem 'rails', '~> 7.1.2'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '1.7.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '>= 5.0'
+gem 'puma', '6.4.2'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
+gem 'importmap-rails', '2.0.1'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+gem 'stimulus-rails', '1.3.3'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
@@ -39,16 +39,16 @@ gem 'bcrypt', '~> 3.1.20'
 gem 'tzinfo-data', platforms: [:windows, :jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem 'bootsnap', '1.17.1', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
 
-gem 'rubocop-rails', '2.22.2', group: [:test, :development], require: false
+gem 'rubocop-rails', '2.23.1', group: [:test, :development], require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: [:mri, :windows]
+  gem 'debug', '1.9.1', platforms: [:mri, :windows]
 end
 
 group :development do
@@ -72,16 +72,16 @@ gem 'rspec-rails', '6.1.0', group: [:test, :development]
 
 gem 'rails-controller-testing', group: [:test, :development]
 
-gem "factory_bot_rails", "~> 6.4.2", group: :test
+gem "factory_bot_rails", "6.4.3", group: :test
 
 gem 'byebug', '11.1.3', group: [:test, :development]
 
-gem 'dockerfile-rails', '>= 1.5', group: :development
+gem 'dockerfile-rails', '1.6.3', group: :development
 
-gem 'sentry-ruby', '~> 5.15'
+gem 'sentry-ruby', '5.16.1'
 
-gem 'sentry-rails', '~> 5.15'
+gem 'sentry-rails', '5.16.1'
 
-gem 'tailwindcss-rails', '~> 2.0.32'
+gem 'tailwindcss-rails', '2.3.0'
 
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id', '5.5.1'
