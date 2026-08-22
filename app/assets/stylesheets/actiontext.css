@@ -29,3 +29,14 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+/* Custom styles for Trix code blocks (Espresso/Warm Dark style) */
+.trix-content pre {
+  background-color: #2C241B; /* Expresso escuro */
+  color: #FDF5E6; /* Creme (cor do fundo da página) */
+  padding: 1rem;
+  border-radius: 0.375rem; /* rounded-md */
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  border: 1px solid #4A3C2D; /* Borda sutil levemente mais clara */
+}
